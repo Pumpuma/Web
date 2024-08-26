@@ -1,21 +1,53 @@
-    <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>zirec.lol</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Script</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: Arial; /* Ensures text is in monospaced font */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Black overlay with opacity */
+            z-index: 1000; /* Ensure it covers everything */
+        }
+        #script-container {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            z-index: 2000; /* Ensure it's above the overlay */
+            white-space: pre; /* Preserve spaces and line breaks */
         }
     </style>
 </head>
 <body>
-    <pre>
---[[
-website text here (sigma??)
-]]
-    </pre>
+    <div id="overlay"></div>
+    <div id="script-container"></div>
+
+    <script>
+        // JavaScript to handle script content visibility
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script content
+            const scriptText = 'print("hello world")';
+            // This can be used if you want to dynamically display or process it
+            console.log('Script loaded but hidden');
+            // If you need to show it in Roblox, use it in a fetch request or similar method.
+        });
+    </script>
 </body>
 </html>
